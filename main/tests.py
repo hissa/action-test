@@ -11,3 +11,6 @@ class StudentTest(TestCase):
         student.save()
         self.assertEqual(models.Student.objects.count(), 1)
         self.assertEqual(str(student), f'{student.id}: {student.name}')
+
+    def test_never_succeeds(self):
+        self.assertTrue(True)
